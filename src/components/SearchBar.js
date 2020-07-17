@@ -5,6 +5,7 @@ class SearchBar extends React.Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
+
     this.props.onSubmit(this.state.term);
   };
 
@@ -19,12 +20,11 @@ class SearchBar extends React.Component {
               value={this.state.term}
               onChange={(e) => this.setState({ term: e.target.value })}
             />
-
-            {/*we dont put () when we pass a func to even handlers*/}
           </div>
         </form>
       </div>
     );
   }
 }
+
 export default SearchBar;
